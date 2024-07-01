@@ -15,7 +15,6 @@ const displayProduct = (product,quantity) =>{
     const li = document.createElement('li');
     li.innerText = `${product}: ${quantity}`;
     ul.appendChild(li);
-
 }
  const getStoredShopingCart = () => {
     const storedCart = localStorage.getItem('cart');
