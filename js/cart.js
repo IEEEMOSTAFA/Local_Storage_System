@@ -35,3 +35,13 @@ const saveProductToLocalStorage = (product,quantity) => {
     // console.log(cartStringIpy);
     localStorage.setItem('cart', cartStringIpy)
 }
+const displayProductFromLocalStorage = () => {
+    const savedCart = getStoredShopingCart();
+    console.log(savedCart);
+    for(const product in savedCart){
+        const quantity = savedCart[product]
+        console.log(product,quantity);
+        displayProduct(product,quantity);
+    }
+}
+displayProductFromLocalStorage();   
